@@ -4,10 +4,13 @@
   %a{ href: '' } MyFIG for Businesses
   %a{ href: '' } What is MyFIG
 
-{{ cms:page:content }}
+.mainwrap
+  %main
+    {{ cms:page:content }}
 
-%footer
+%footer.cf
   %span.footer-brand MyFigueroa
   %span.footer-partners
+    %span This project is partially funded by <a href='https://www.metroexpresslanes.net/en/home/index.shtml'>Metro ExpressLanes</a>
   %span.footer-social
     %a{ href: '#' } Contact

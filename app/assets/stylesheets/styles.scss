@@ -1,5 +1,6 @@
 $color-yellow: #E6B10F;
 $color-blue: #092C74;
+$color-grey: #333;
 
 // Measurements
 $bodymargin: 1.5em;
@@ -22,7 +23,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 14px;
   font: inherit;
   vertical-align: baseline;
   font-family:'MetaPro';
@@ -60,7 +61,11 @@ a {
   }
 }
 
-// End reset
+body {
+  background-color:$color-grey
+}
+
+/* End reset */
 
 header {
   background-color:$color-yellow;
@@ -80,16 +85,56 @@ nav {
 
 footer {
   color:$color-yellow;
-  background-color:#333;
+  background-color:$color-grey;
   padding:.618rem $bodymargin;
 
   .footer-brand {
     font-size:24px;
     font-weight:bold;
+    margin-right:1.618rem;
+  }
+
+  .footer-partners {
+    position:relative;
+    color:rgba(#fff, .6);
+    font-size:12px;
+    top:-4px;
+
+    a {
+      color:rgba(#fff, .6);
+      text-decoration:underline;
+    }
   }
 
   .footer-social {
     font-size:20px;
     font-weight:bold;
+    float:right;
+
+    a {
+      color:$color-yellow;
+    }
   }
+}
+
+.mainwrap {
+  background-color:#fff;
+}
+
+main {
+  margin:auto;
+  width:1024px;
+  padding:1rem $bodymargin;
+}
+
+.cf:before,
+.cf:after {
+  content:"";
+  display:table;
+}
+.cf:after {
+  clear:both;
+}
+.cf {
+  zoom:1;
 }
