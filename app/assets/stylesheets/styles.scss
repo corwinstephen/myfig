@@ -1,0 +1,95 @@
+$color-yellow: #E6B10F;
+$color-blue: #092C74;
+
+// Measurements
+$bodymargin: 1.5em;
+
+// Reset
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family:'MetaPro';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color:$color-blue;
+  text-decoration:none;
+
+  &:hover {
+    opacity:.8;
+  }
+}
+
+// End reset
+
+header {
+  background-color:$color-yellow;
+  padding:1rem $bodymargin;
+  color:$color-blue;
+}
+
+nav {
+  background-color:$color-blue;
+  padding:1rem $bodymargin;
+
+  a {
+    color:#fff;
+    margin-right:1.618rem;
+  }
+}
+
+footer {
+  color:$color-yellow;
+  background-color:#333;
+  padding:.618rem $bodymargin;
+
+  .footer-brand {
+    font-size:24px;
+    font-weight:bold;
+  }
+
+  .footer-social {
+    font-size:20px;
+    font-weight:bold;
+  }
+}

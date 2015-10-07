@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myfig</title>
+  <title>
+    <% if @cms_page.try(:label).present? %>
+      <%= @cms_page.label.capitalize %> - 
+    <% end %>
+    LA2050
+  </title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <% if @cms_site %>
+    <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, 'la2050') %>
+    <%= javascript_include_tag comfy_cms_render_js_path(@cms_site.id, @cms_layout.try(:identifier) || 'la2050') %>
+  <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="description" content="Transforming the Figueroa Corridor to promote economic development, improve the pedestrian, bike, and transit experience, and beautify some of Los Angeles' most diverse communities.">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta property="og:title" content="<%= @cms_page.try(:label).present? ? @cms_page.label.capitalize : 'MyFigueroa' %>">
+  <meta property="og:site_name" content="MyFigueroa">
+  <meta property="og:url" content="http://www.myfigueroa.com">
+  <meta property="og:description" content="Transforming the Figueroa Corridor to promote economic development, improve the pedestrian, bike, and transit experience, and beautify some of Los Angeles' most diverse communities.">
+  <meta property="fb:app_id" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="<%= image_url('og.png') %>">
 </head>
 <body>
 
