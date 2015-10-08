@@ -1,12 +1,20 @@
-%header Hey
+%header.cf
+  .header-left
+    .header-mark Let's Fig it Out!
+    .header-byline Try a different way to go during MyFigueroa Construction in 2016
+
+  .header-right
+    .header-secondarymark
+      MyFIGUEROA
+
 %nav
   %a{ href: '' } Getting around MyFIG
   %a{ href: '' } MyFIG for Businesses
   %a{ href: '' } What is MyFIG
+  %a{ href: '' } Mailing list
 
-.mainwrap
-  %main
-    {{ cms:page:content }}
+%main
+  {{ cms:page:content }}
 
 %footer.cf
   %span.footer-brand MyFigueroa

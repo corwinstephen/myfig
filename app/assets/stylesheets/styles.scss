@@ -4,6 +4,10 @@ $color-grey: #333;
 
 // Measurements
 $bodymargin: 1.5em;
+$contentwidth: 1024px;
+
+// Fonts
+$font-stag: 'Stag Stencil';
 
 // Reset
 
@@ -23,7 +27,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 14px;
+  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   font-family:'MetaPro';
@@ -71,6 +75,31 @@ header {
   background-color:$color-yellow;
   padding:1rem $bodymargin;
   color:$color-blue;
+
+  .header-left {
+    float:left;
+  }
+
+  .header-right {
+    float:right;
+  }
+
+  .header-mark {
+    font-family:$font-stag;
+    font-weight:bold;
+    font-size:51px;
+    margin-bottom:5px;
+  }
+
+  .header-byline {
+    font-weight:bold;
+    font-size:13px;
+  }
+
+  .header-secondarymark {
+    font-weight:bold;
+    font-size:24px;
+  }
 }
 
 nav {
@@ -117,14 +146,11 @@ footer {
   }
 }
 
-.mainwrap {
-  background-color:#fff;
-}
-
-main {
-  margin:auto;
-  width:1024px;
+.centercolumn {
+  width:$contentwidth;
   padding:1rem $bodymargin;
+  margin:auto;
+  position:relative;
 }
 
 .cf:before,
@@ -137,4 +163,47 @@ main {
 }
 .cf {
   zoom:1;
+}
+
+/* Page styles */
+
+#homehero {
+  height:530px;
+  position:relative;
+}
+
+.homehero-overlaywrap {
+  width:$contentwidth;
+  height:100%;
+  margin:0 auto;
+  position:relative;
+  z-index:4;
+}
+
+.homehero-overlay {
+  position:absolute;
+  background-color:rgba(#333, .8);
+  color:#fff;
+  padding:1rem;
+  bottom:0;
+  left:0;
+  border-top:4px solid rgba(#1E1E1E, .7);
+
+  h1 {
+    font-size:60px;
+    font-weight:bold;
+    margin-bottom:.618rem;
+  }
+
+  div {
+    font-size:24px;
+    color:rgba(#fff, .9);
+  }
+}
+
+#homemap {
+  position:relative;
+  height:530px;
+  background-color:#fff;
+  z-index:5;
 }
