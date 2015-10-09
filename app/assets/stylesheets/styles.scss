@@ -123,14 +123,33 @@ header {
   background-color:$color-yellow;
   padding:1rem $bodymargin;
   color:$color-blue;
+  position:relative;
+
+  .roadoverlay {
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    overflow:hidden;
+    z-index:1;
+    opacity:.3;
+    width:74%;
+
+    img {
+      width:100%;
+    }
+  }
 
   .header-left {
     float:left;
     position:relative;
+    z-index:2;
   }
 
   .header-right {
     float:right;
+    position:relative;
+    z-index:2;
   }
 
   .header-mark {
