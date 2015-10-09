@@ -73,7 +73,28 @@ a {
 }
 
 body {
-  background-color:$color-grey
+  background-color:$color-grey;
+  color:rgba(#000, .87);
+}
+
+h1 {
+  font-size:30px;
+  font-weight:bold;
+  color:$color-blue;
+  margin-bottom:1rem;
+}
+
+p, ul, ol {
+  line-height:24px;
+  margin-bottom:1rem;
+}
+
+ul {
+  li {
+    border-left:3px solid $color-yellow;
+    padding-left:1rem;
+    margin-bottom:1rem;
+  }
 }
 
 /* End reset */
@@ -165,9 +186,23 @@ footer {
 
 .centercolumn {
   width:$contentwidth;
-  padding:1rem $bodymargin;
+  padding:1.5rem $bodymargin;
   margin:auto;
   position:relative;
+
+  &.longform {
+    width:$contentwidth * .75;
+
+    img {
+      width:100%;
+      border:6px solid rgba(#c5c5c5, .5);
+      border-radius:4px;
+    }
+  }
+}
+
+.bgmain {
+  background-color:#fff;
 }
 
 .cf:before,
@@ -215,6 +250,7 @@ footer {
     font-size:60px;
     font-weight:bold;
     margin-bottom:.618rem;
+    color:#fff;
   }
 
   & > div {
