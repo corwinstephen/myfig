@@ -8,6 +8,7 @@ $contentwidth: 1024px;
 
 // Fonts
 $font-stag: 'Stag Stencil';
+$font-meta: 'MetaPro';
 
 // Reset
 
@@ -30,7 +31,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family:'MetaPro';
+  font-family:$font-meta;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -78,6 +79,7 @@ header {
 
   .header-left {
     float:left;
+    position:relative;
   }
 
   .header-right {
@@ -182,24 +184,39 @@ footer {
   z-index:4;
 }
 
-.homehero-overlay {
+.homehero-overlay, .homemap-overlay {
   position:absolute;
+  padding:2rem;
+  left:0;
+  width:378px;
+}
+
+.homehero-overlay {
   background-color:rgba(#333, .8);
   color:#fff;
-  padding:1rem;
   bottom:0;
-  left:0;
   border-top:4px solid rgba(#1E1E1E, .7);
 
-  h1 {
+  & > h1 {
     font-size:60px;
     font-weight:bold;
     margin-bottom:.618rem;
   }
 
-  div {
+  & > div {
     font-size:24px;
     color:rgba(#fff, .9);
+  }
+
+  & > a {
+    font-family:$font-stag;
+    font-size:46px;
+    font-weight:bold;
+    color:$color-yellow;
+
+    img {
+      margin-left:1rem;
+    }
   }
 }
 
@@ -208,4 +225,45 @@ footer {
   height:500px;
   background-color:#fff;
   z-index:5;
+}
+
+.homemap-overlaywrap {
+  width:$contentwidth;
+  margin:0 auto;
+  position:relative;
+  z-index:4;
+}
+
+.homemap-overlay {
+  background-color:rgba($color-yellow, .9);
+  top:0;
+  text-align:center;
+
+  h2 {
+    font-size:24px;
+    font-weight:bold;
+    color:$color-blue;
+    margin-bottom:1rem;
+    line-height:30px;
+  }
+
+  p {
+    color:#fff;
+    line-height:24px;
+  }
+}
+
+.linebreak {
+  height:1px;
+  display:block;
+  background-color:rgba(#fff, .5);
+  margin:1rem 0;
+}
+
+a.spanlink {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 }
