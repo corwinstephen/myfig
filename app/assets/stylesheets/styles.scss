@@ -103,6 +103,10 @@ p + h2 {
 p, ul, ol {
   line-height:24px;
   margin-bottom:1rem;
+
+  &:last-child {
+    margin-bottom:0;
+  }
 }
 
 ul {
@@ -168,6 +172,7 @@ footer {
   color:$color-yellow;
   background-color:$color-grey;
   padding:.618rem $bodymargin;
+  border-bottom:1px solid rgba(#fff, .05);
 
   .footer-brand {
     font-size:24px;
@@ -202,19 +207,21 @@ footer {
 
 .centercolumn {
   width:$contentwidth;
-  padding:1.5rem $bodymargin;
+  padding:3rem $bodymargin;
   margin:auto;
   position:relative;
 
-  &.longform {
+  &.narrow {
     width:$contentwidth * .75;
+  }
+}
 
-    img {
-      width:100%;
-      border:6px solid rgba(#c5c5c5, .5);
-      border-radius:4px;
-      margin-bottom:1rem;
-    }
+.longform {
+  img {
+    width:100%;
+    border:6px solid rgba(#c5c5c5, .5);
+    border-radius:4px;
+    margin-bottom:1rem;
   }
 }
 
@@ -354,6 +361,25 @@ a.spanlink {
   padding:1.5rem 0;
 }
 
+a.bluebox {
+  background-color:$color-blue;
+  padding:1rem 1.618rem;
+  display:inline-block;
+
+  dl {
+    dt {
+      color:#fff;
+      font-weight:bold;
+      font-size:30px;
+      margin-bottom:3px;
+    }
+
+    dd {
+      color:$color-yellow;
+    }
+  }
+}
+
 .homemap-menucontainer {
   width:$contentwidth;
   padding-left:1.5rem;
@@ -361,9 +387,6 @@ a.spanlink {
   text-align:center;
 
   a {
-    display:inline-block;
-    background-color:$color-blue;
-    padding:1rem 1.618rem;
     text-align:center;
     margin:0 1rem;
 
@@ -374,17 +397,72 @@ a.spanlink {
     &:last-child {
       text-align:left;
     }
+  }
+}
 
-    dl {
-      dt {
-        color:#fff;
-        font-weight:bold;
-        font-size:30px;
-        margin-bottom:3px;
-      }
+.businessboxes {
+  .bluebox {
+    display:block;
+    margin-bottom:.618rem;
+  }
+}
 
-      dd {
-        color:$color-yellow;
+$getaroundheight: 400px;
+.getaroundoption {
+  border-top:5px solid $color-yellow;
+  margin-bottom:3rem;
+
+  &:last-child {
+    margin-bottom:0;
+  }
+
+  dl {
+    height:$getaroundheight;
+    width:38.2%;
+    position:relative;
+    float:left;
+
+    dt {
+      position:absolute;
+      height:100%;
+      background-color:rgba(#000, .5);
+      line-height:400px;
+      font-size:48px;
+      font-family:$font-stag;
+      color:#fff;
+      font-weight:bold;
+      width:100%;
+      text-align:center;
+    }
+
+    dd {
+      overflow:hidden;
+      height:100%;
+    }
+  }
+
+  .getaroundmap {
+    height:$getaroundheight;
+    width:61.8%;
+    float:right;
+  }
+
+  .convenientfor {
+    background-color:#F3FAFE;
+    padding:1rem;
+
+    & > span {
+      margin-right:1rem;
+      font-weight:bold;
+    }
+
+    ul {
+      display:inline-block;
+
+      li {
+        display:inline-block;
+        margin-bottom:0;
+        padding-right:1rem;
       }
     }
   }
