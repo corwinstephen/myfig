@@ -133,7 +133,7 @@ header {
     overflow:hidden;
     z-index:1;
     opacity:.3;
-    width:74%;
+    width:100%;
 
     img {
       width:100%;
@@ -193,6 +193,7 @@ footer {
   padding:.618rem $bodymargin;
   border-bottom:1px solid rgba(#fff, .05);
 
+
   .footer-brand {
     font-size:24px;
     font-weight:bold;
@@ -209,6 +210,11 @@ footer {
       color:rgba(#fff, .6);
       text-decoration:underline;
     }
+    
+    & > span {
+      margin-right:1rem;
+      display:inline-block;
+    }
   }
 
   .footer-social {
@@ -220,6 +226,17 @@ footer {
 
     a {
       color:$color-yellow;
+    }
+
+  }
+
+  .icon {
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:1rem;
+
+    img {
+      height:1.5rem;
     }
   }
 }
