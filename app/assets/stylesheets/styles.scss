@@ -70,6 +70,12 @@ a {
     opacity:.8;
     transition:opacity $animation-time;
   }
+
+  &.bigger {
+    font-size:1.2em;
+    color:$color-yellow;
+    text-decoration:underline;
+  }
 }
 
 body {
@@ -210,7 +216,7 @@ footer {
       color:rgba(#fff, .6);
       text-decoration:underline;
     }
-    
+
     & > span {
       margin-right:1rem;
       display:inline-block;
@@ -447,6 +453,7 @@ $getaroundheight: 400px;
 .getaroundoption {
   border-top:5px solid $color-yellow;
   margin-bottom:3rem;
+  position:relative;
 
   &:last-child {
     margin-bottom:0;
@@ -459,16 +466,27 @@ $getaroundheight: 400px;
     float:left;
 
     dt {
-      position:absolute;
       height:100%;
       background-color:rgba(#000, .5);
-      line-height:400px;
       font-size:48px;
       font-family:$font-stag;
       color:#fff;
       font-weight:bold;
       width:100%;
       text-align:center;
+      position:absolute;
+
+      span {
+        top:50%;
+        transform:translateY(-50%);
+        position:absolute;
+        width:100%;
+        display:block;
+      }
+
+      a {
+        z-index:50;
+      }
     }
 
     dd {
@@ -497,9 +515,15 @@ $getaroundheight: 400px;
 
       li {
         display:inline-block;
+        margin-top:.5rem;
         margin-bottom:0;
         padding-right:1rem;
       }
+    }
+
+    aside {
+      color:rgba(#000, .54);
+      font-style:italic;
     }
   }
 }
