@@ -524,6 +524,11 @@ $getaroundheight: 400px;
     height:$getaroundheight;
     width:61.8%;
     float:right;
+
+    iframe {
+      height:100%;
+      width:100%;
+    }
   }
 
   .convenientfor {

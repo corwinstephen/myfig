@@ -1,6 +1,6 @@
 .bgmain
   .centercolumn
-    %h1 Fig out getting around
+    %h1 {{cms:page:title:string}}
     %p
       %a.bigger{ target: '_blank', href: 'http://www.metro.net/riding/' } Fig out transit with Metro
     %br
@@ -12,7 +12,7 @@
             %span Metro <br />Silver Line
           %dd {{cms:file:silverline.jpg:image}}
         .getaroundmap
-          {{cms:snippet:silverlinemap}}
+          {{cms:page:silverline}}
 
       .convenientfor
         %p Metro Silver Line is a rapid bus service that connects the South Bay and San Gabriel Valley to Downtown LA. 
@@ -37,7 +37,7 @@
             %span Metro Expo line
           %dd {{cms:file:expoline.jpg:image}}
         .getaroundmap
-          {{cms:snippet:silverlinemap}}
+          {{cms:page:expo_line}}
 
       .convenientfor
         %p The Metro Expo Line is a light rail line that connects the Westside to Downtown LA, along and near Exposition Blvd. 
@@ -61,7 +61,7 @@
             %span Metro ExpressLanes
           %dd {{cms:file:110express.jpg:image}}
         .getaroundmap
-          {{cms:snippet:silverlinemap}}
+          {{cms:page:expresslanes}}
 
       .convenientfor
         %p Metro ExpressLanes are carpool lanes that use congestion pricing to allow single passenger vehicles to pay to use the lanes. The funding from these tolls goes towards subsidzing transit and other projects along the 110 freeway (including this campaign to promote MyFigueroa!). To use the ExpressLanes, drivers must have a Fastrak, which can be purchased <a href='https://www.metroexpresslanes.net/en/home/index.shtml'>online</a> and at various vendors around LA. 
@@ -82,7 +82,7 @@
             %span Bicycle
           %dd {{cms:file:bike.jpg:image}}
         .getaroundmap
-          {{cms:snippet:silverlinemap}}
+          {{cms:page:bikemap}}
 
       .convenientfor
         %p MyFigueroa will bring safety improvements for bicyclists on Figueroa St, but there are already a lot of great routes for getting around the Downtown and USC area on a bike.
