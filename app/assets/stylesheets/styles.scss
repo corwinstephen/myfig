@@ -211,6 +211,11 @@ nav {
   a {
     color:#fff;
     margin-right:1.618rem;
+
+    &.float-right {
+      float:right;
+      margin-right:0;
+    }
   }
 }
 
