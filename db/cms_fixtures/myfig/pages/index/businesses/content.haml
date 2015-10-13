@@ -9,10 +9,15 @@
           %dt Share our poster or flyers
           %dd Get your customers excited about MyFig
 
-      %a.bluebox{ href: '#' }
-        %dl
-          %dt Embed a map on your site
-          %dd Showcase new ways to get to your business
+      %details
+        %summary
+          %a.bluebox{ href: '#' }
+            %dl
+              %dt Embed a map on your site
+              %dd Showcase new ways to get to your business
+        %p Copy and past this code to embed a map on your site.
+        %code
+          %textarea{ onClick: "this.focus();this.select();" }= CGI::escapeHTML("<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/myfig.nlj7k4fi/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoibXlmaWciLCJhIjoiY2lmandtODVrMDVmMnNpa3FhaHE4czMzMiJ9.7kTALruEJvvwyIPfTfSSJw'></iframe>")
 
       %a.bluebox{ href: '#' }
         %dl

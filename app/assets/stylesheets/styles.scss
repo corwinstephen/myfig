@@ -1,6 +1,7 @@
 $color-yellow: #E6B10F;
 $color-blue: #092C74;
 $color-grey: #333;
+$color-pale-blue: #F3FAFE;
 
 // Measurements
 $bodymargin: 1.5em;
@@ -81,6 +82,26 @@ a {
 body {
   background-color:$color-grey;
   color:rgba(#000, .87);
+}
+
+code {
+  background-color:$color-pale-blue;
+  padding:1rem;
+  display:block;
+
+  textarea {
+    width:100%;
+    height:100px;
+    background:none;
+    border:none;
+    outline:none;
+    resize:none;
+    font-size:1rem;
+  }
+}
+
+details {
+  ::-webkit-details-marker { display:none; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -447,6 +468,10 @@ a.bluebox {
     display:block;
     margin-bottom:.618rem;
   }
+
+  details[open] {
+    margin-bottom:1rem;
+  }
 }
 
 $getaroundheight: 400px;
@@ -502,7 +527,7 @@ $getaroundheight: 400px;
   }
 
   .convenientfor {
-    background-color:#F3FAFE;
+    background-color:$color-pale-blue;
     padding:1rem;
 
     & > span {
