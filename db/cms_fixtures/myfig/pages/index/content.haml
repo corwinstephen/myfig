@@ -1,3 +1,13 @@
+:javascript
+  $(document).ready(function(){
+    $('#moreinfolink').click(function(e){
+      e.preventDefault();
+      $('html,body').animate({
+        scrollTop: $('#moreinfo').offset().top
+      });
+    });
+  });
+
 #homehero{ data: { parallax: 'scroll', image: { src: '{{cms:file:herorendering.jpg}}' }, speed: 0.87 } }
   .homehero-overlaywrap
     .homehero-overlay.animated.bounceInDown
@@ -6,7 +16,7 @@
 
       .linebreak
 
-      %a{ href: '#' } Let's Fig it out {{cms:file:downtick.svg:image}}
+      %a#moreinfolink{ href: '#moreinfo' } Let's Fig it out {{cms:file:downtick.svg:image}}
 
 #homemap
   .homemap-overlaywrap
@@ -20,7 +30,7 @@
 
   .homemap-menuoverlay
     .homemap-menucontainer
-      %a.bluebox{ href: '/about' }
+      %a#moreinfo.bluebox{ href: '/about' }
         %dl
           %dt More info
           %dd Learn more about MyFig
