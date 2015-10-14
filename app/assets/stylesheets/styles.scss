@@ -252,6 +252,10 @@ nav {
       float:right;
       margin-right:0;
     }
+
+    &.active {
+      color:$color-yellow;
+    }
   }
 
   @media (max-width: 890px) {
