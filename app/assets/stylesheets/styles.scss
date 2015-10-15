@@ -657,3 +657,51 @@ $getaroundheight: 400px;
     }
   }
 }
+
+// Forms
+.indicates-required {
+  margin-bottom:1rem;
+}
+
+input[type=text], input[type=email] {
+  border:none;
+  border-bottom:1px solid #ccc;
+}
+
+.mc-field-group {
+  margin-bottom:1rem;
+  font-size:18px;
+
+  label {
+    width:200px;
+    display:inline-block;
+    color:rgba(#000, .54);
+  }
+
+  input {
+    width:300px;
+    font-size:18px;
+    outline:none;
+    padding:5px 0;
+    font-family:$font-meta;
+  }
+}
+
+#mc-embedded-subscribe {
+  margin-top:1rem;
+}
+
+.mce_inline_error {
+  margin-top:1rem !important;
+}
+
+button, input[type=submit] {
+  background-color:$color-blue;
+  color:#fff;
+  border-radius:3px;
+  border:none;
+  font-size:18px;
+  font-weight:bold;
+  padding:1rem;
+  letter-spacing:1px;
+}
