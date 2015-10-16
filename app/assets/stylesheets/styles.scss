@@ -2,6 +2,7 @@ $color-yellow: #E6B10F;
 $color-blue: #092C74;
 $color-grey: #333;
 $color-pale-blue: #F3FAFE;
+$color-light-blue: #6EC4E8;
 
 // Measurements
 $bodymargin: 1.5em;
@@ -510,7 +511,7 @@ a.spanlink {
 }
 
 a.bluebox {
-  background-color:$color-blue;
+  background-color:$color-light-blue;
   padding:1rem 1.618rem;
   display:inline-block;
 
@@ -523,7 +524,7 @@ a.bluebox {
     }
 
     dd {
-      color:$color-yellow;
+      color:$color-blue;
     }
   }
 
