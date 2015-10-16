@@ -697,12 +697,15 @@ input[type=text], input[type=email] {
 }
 
 button, input[type=submit] {
-  background-color:$color-blue;
+  background-color:$color-light-blue;
+  font-family:$font-meta;
   color:#fff;
-  border-radius:3px;
   border:none;
   font-size:18px;
   font-weight:bold;
   padding:1rem;
-  letter-spacing:1px;
+
+  &:hover {
+    cursor:pointer;
+  }
 }
