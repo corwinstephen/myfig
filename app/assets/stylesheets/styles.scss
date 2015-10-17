@@ -63,7 +63,7 @@ table {
 }
 
 a {
-  color:$color-blue;
+  color:$color-light-blue;
   text-decoration:none;
   transition:opacity $animation-time;
   opacity:1;
@@ -511,7 +511,7 @@ a.spanlink {
 }
 
 a.bluebox {
-  background-color:$color-light-blue;
+  background-color:$color-blue;
   padding:1rem 1.618rem;
   display:inline-block;
 
@@ -524,7 +524,7 @@ a.bluebox {
     }
 
     dd {
-      color:$color-blue;
+      color:$color-yellow;
     }
   }
 
@@ -697,13 +697,14 @@ input[type=text], input[type=email] {
 }
 
 button, input[type=submit] {
-  background-color:$color-light-blue;
+  background-color:$color-blue;
   font-family:$font-meta;
-  color:#fff;
+  color:$color-yellow;
   border:none;
   font-size:18px;
   font-weight:bold;
   padding:1rem;
+  letter-spacing:px;
 
   &:hover {
     cursor:pointer;
