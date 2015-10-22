@@ -31,7 +31,7 @@ ComfortableMexicanSofa.configure do |config|
   # filesystem see: http://rdoc.info/gems/paperclip/2.3.8/Paperclip/Storage/Filesystem
   # If you are using S3 and HTTPS, pass :s3_protocol => '' to have URLs that use the protocol of the page
   #   config.upload_file_options = {:url => '/system/:class/:id/:attachment/:style/:filename'}
-  config.upload_file_options = config.upload_file_options = {
+  config.upload_file_options = {
     :storage        => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :path => "/:class/:id/:attachment/:style/:filename",

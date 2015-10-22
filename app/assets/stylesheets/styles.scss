@@ -327,13 +327,13 @@ footer {
 }
 
 .centercolumn {
-  width:$contentwidth;
+  max-width:$contentwidth;
   padding:3rem $bodymargin;
   margin:auto;
   position:relative;
 
   &.narrow {
-    width:$contentwidth * .75;
+    max-width:$contentwidth * .75;
   }
 }
 
@@ -585,6 +585,7 @@ $getaroundheight: 400px;
     margin-bottom:0;
   }
 
+
   dl {
     height:$getaroundheight;
     width:38.2%;
@@ -621,6 +622,7 @@ $getaroundheight: 400px;
     }
   }
 
+
   .getaroundmap {
     height:$getaroundheight;
     width:61.8%;
@@ -629,6 +631,26 @@ $getaroundheight: 400px;
     iframe {
       height:100%;
       width:100%;
+    }
+  }
+
+  @media(max-width: 830px){
+    dl, .getaroundmap {
+      display:block;
+      float:none;
+      width:100%;
+    }
+
+    dl {
+      dd, dt {
+        width:100%;
+      }
+
+      dd {
+        img {
+          width:100%;
+        }
+      }
     }
   }
 
