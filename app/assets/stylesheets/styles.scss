@@ -383,7 +383,6 @@ footer {
   padding:2rem;
   left:0;
   max-width:378px;
-
 }
 
 .homehero-overlay {
@@ -484,6 +483,12 @@ footer {
     color:#fff;
     line-height:24px;
   }
+}
+
+.homemap-legendoverlay {
+  position:absolute;
+  top:1rem;
+  right:1rem;
 }
 
 .linebreak {
