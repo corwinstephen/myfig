@@ -1,13 +1,18 @@
-%h1 Blog Posts
+= render partial: 'layouts/header'
 
-- @posts.each do |post|
+%main
+  .bgmain
+    .centercolumn.longform.narrow
+      - @posts.each do |post|
+        .blogpost
+          %h1= link_to post.title, comfy_blog_post_path(@cms_site.path, @blog.path, post.slug)
+          .blogpost-author
+            = "by #{post.author.present? ? post.author : "Annonymous"} &nbsp;| &nbsp;".html_safe
+          .date
+            = post.published_at.strftime("%B %d, %Y")
+          .blogpost-content
+            = post.content.html_safe
 
-  %h1= link_to post.title, comfy_blog_post_path(@cms_site.path, @blog.path, post.slug)
-  .author
-    = post.author
-  .date
-    = post.published_at.to_s(:db)
-  .content
-    = post.content.html_safe
+    = comfy_paginate @posts
 
-= comfy_paginate @posts
+= render partial: 'layouts/footer'

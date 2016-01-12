@@ -107,6 +107,10 @@ details {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom:1rem;
+
+  a {
+    color:$color-blue;
+  }
 }
 
 h1 {
@@ -206,6 +210,8 @@ header {
   .header-secondarymark {
     font-weight:bold;
     font-size:24px;
+    position:relative;
+    top:15px;
 
     img {
       height:35px;
@@ -228,6 +234,7 @@ header {
 
     .header-secondarymark {
       font-size:24px;
+      top:8px;
 
       img {
         height:25px;
@@ -735,5 +742,27 @@ button, input[type=submit] {
 
   &:hover {
     cursor:pointer;
+  }
+}
+
+.date {
+  display:inline-block;
+}
+
+.blogpost-author {
+  display:inline-block;
+}
+
+.blogpost-content {
+  margin-top:1rem;
+}
+
+.blogpost {
+  .date, .blogpost-author {
+    color:rgba(#000, .54);
+  }
+
+  & + & {
+    margin-top:2rem;
   }
 }
