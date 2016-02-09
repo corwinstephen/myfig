@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.fancybox
 //= require parallax
 //= require underscore
 //= require_tree .
