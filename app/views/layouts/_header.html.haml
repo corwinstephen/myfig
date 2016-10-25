@@ -1,14 +1,12 @@
 %header.cf
-  .roadoverlay= image_tag "roadoverlay.svg"
+  .roadoverlay {{cms:file:roadoverlay.svg:image}}
   .header-left
-    %a.spanlink{ href: '/' }
-    .header-mark Let's Fig it Out!
-    .header-byline Try a different way to go during MyFigueroa Construction in 2016
-
-  .header-right
+    %a.spanlink{:href => "/"}
     .header-secondarymark
-      = image_tag "icons.png"
+      {{cms:file:icons.png:image}}
       MyFigueroa
+  .header-right
+    .header-byline Try a different way to go during MyFigueroa Construction in 2016
 
 %nav
   %a{ href: '/blog', class: 'active' } Blog
